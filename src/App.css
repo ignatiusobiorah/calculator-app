@@ -1,0 +1,78 @@
+body {
+  box-sizing: border-box;
+  margin: 0;
+  background: whitesmoke;
+}
+
+.calculator-grid {
+  display: grid;
+  margin: 10vh 35vw;
+  grid-template-columns: repeat(4, 6rem);
+  grid-template-rows: minmax(7rem, auto) repeat(5, 6rem);
+}
+
+.span-two {
+  grid-column: span 2;
+}
+
+.output {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-around;
+  padding: 0.75rem;
+  word-wrap: break-word;
+  word-break: break-all;
+}
+
+.calculator-grid > button {
+  cursor: pointer;
+  font-size: 2rem;
+  border: 1px solid white;
+  outline: none;
+  background-color: rgba(225, 225, 225, 0.3);
+}
+
+.calculator-grid > button:hover,
+.calculator-grid > button:focus {
+  background-color: rgba(225, 225, 225, 1);
+}
+
+#del {
+  background-color: rgba(225, 0, 0, 0.8);
+}
+
+#ac {
+  background-color: rgba(225, 225, 0, 0.75);
+}
+
+#equals {
+  background-color: rgba(0, 225, 0, 0.75);
+}
+
+#del:hover,
+#del:focus {
+  background-color: rgba(225, 0, 0, 1);
+}
+
+#ac:hover,
+#ac:focus {
+  background-color: rgba(225, 225, 0, 1);
+}
+
+#equals:hover,
+#equals:focus {
+  background-color: rgba(0, 225, 0, 1);
+}
+
+.output .previous-operand {
+  color: whitesmoke;
+  font-size: 1.5rem;
+}
+
+.output .current-operand {
+  color: white;
+  font-size: 2rem;
+}
