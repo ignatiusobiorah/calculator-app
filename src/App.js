@@ -23,7 +23,7 @@ function App() {
     try {
       setResult(eval(result).toString());
     } catch (error) {
-      if (result == "") {
+      if (result === "") {
         return result;
       }
       setResult("Syntax error");
